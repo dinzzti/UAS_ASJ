@@ -1,0 +1,93 @@
+/* uas-project/app/static/css/style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FCE4EC; /* Light Pink */
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+
+/* Mengatur font untuk judul utama */
+h1, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animasi untuk konten utama saat halaman dimuat */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInSlideUp {
+    animation: fadeInSlideUp 0.8s ease-out forwards; /* Durasi 0.8s, ease-out, tetap di posisi akhir */
+    animation-delay: 0.2s; /* Sedikit penundaan agar terlihat lebih halus */
+    opacity: 0; /* Pastikan dimulai dengan transparan */
+}
+
+
+/* Tombol ungu/merah muda gelap */
+.btn-purple {
+    background-color: #880E4F; /* Dark Pink/Purple */
+    color: white;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.3s ease-in-out; /* Tambah transisi box-shadow */
+}
+.btn-purple:hover {
+    background-color: #AD1457; /* Slightly lighter on hover */
+    transform: translateY(-3px) scale(1.02); /* Efek sedikit naik dan membesar */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+/* Tombol edit (pink muda dengan teks ungu) */
+.btn-pink-edit {
+    background-color: #FFCDD2; /* Light Pink */
+    color: #880E4F; /* Dark Pink/Purple */
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.3s ease-in-out;
+}
+.btn-pink-edit:hover {
+    background-color: #EF9A9A; /* Darker pink on hover */
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tombol hapus (merah) */
+.bg-red-500 {
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-out, box-shadow 0.3s ease-in-out;
+}
+.bg-red-500:hover {
+    background-color: #EF4444; /* Sedikit lebih terang/gelap saat hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Box kontainer utama */
+.container-box {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Warna teks ungu tua */
+.text-purple-800 {
+    color: #4A148C;
+}
+
+/* Untuk input formulir agar transisi lebih mulus saat fokus */
+input, textarea {
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #EF9A9A; /* Warna pink saat fokus */
+    box-shadow: 0 0 0 3px rgba(239, 154, 154, 0.4); /* Efek shadow saat fokus */
+}
