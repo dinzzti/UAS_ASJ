@@ -1,5 +1,3 @@
-# uas-project/Dockerfile
-
 # Menggunakan image dasar Python 3.9
 FROM python:3.9-slim-buster
 

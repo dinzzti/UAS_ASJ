@@ -1,4 +1,3 @@
-# uas-project/app/src/app.py
 import os
 import time
 import psycopg2
@@ -63,7 +62,7 @@ def ensure_table_exists():
                         id SERIAL PRIMARY KEY,
                         name VARCHAR(100) NOT NULL,
                         description TEXT,
-                        image_url TEXT  -- Kolom baru untuk URL gambar
+                        image_url TEXT 
                     );
                 """)
                 conn.commit()

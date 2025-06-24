@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Koleksi K-pop</title>
-    <!-- Tailwind CSS CDN -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body class="p-4">
-    <!-- Tambahkan kelas animasi di sini -->
+    
     <div class="max-w-xl mx-auto container-box animate-fadeInSlideUp">
         <h1 class="text-3xl font-bold text-center mb-6 text-pink-700">Edit Koleksi K-pop</h1>
         <form action="{{ url_for('edit', item_id=item.id) }}" method="POST" class="space-y-4">
@@ -26,7 +26,7 @@
                 <label for="image_url" class="block text-sm font-medium text-gray-700">URL Gambar:</label>
                 <input type="url" id="image_url" name="image_url" value="{{ item.image_url if item.image_url else '' }}" placeholder="https://example.com/image.jpg" class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500">
                 <p class="mt-1 text-xs text-gray-500">
-                    Sediakan URL gambar (mis. dari Imgur, Postimage). Untuk upload file langsung, dibutuhkan perubahan kode server.
+                    Tambahkan URL gambar (mis. dari Imgur, Postimage). Untuk upload file langsung.
                 </p>
                 {% if item.image_url %}
                     <p class="mt-2 text-sm text-gray-600">URL Gambar Saat Ini: <a href="{{ item.image_url }}" target="_blank" class="text-blue-600 hover:underline break-all">{{ item.image_url }}</a></p>

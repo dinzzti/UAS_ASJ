@@ -1,4 +1,3 @@
-
 services:
   web:
     build:
@@ -8,14 +7,11 @@ services:
       - "5000:5000"
     environment:
       PYTHONUNBUFFERED: "1"
-      # >>> PASTIKAN BARIS INI ADA DAN TEPAT DI SINI <<<
-      DATABASE_HOST: db # Kontainer web harus terhubung ke service 'db' di jaringan Docker
+      DATABASE_HOST: db 
       DATABASE_PORT: 5432 # Port default PostgreSQL
     env_file:
       - ./.env # Ini untuk variabel lain seperti kredensial DB (POSTGRES_USER, POSTGRES_PASSWORD)
     volumes:
-      # Bind mount: Menyinkronkan folder 'app' lokal Anda dengan /app di dalam kontainer.
-      # Ini akan mencakup sub-folder 'src', 'templates', dan 'static'.
       - ./app:/app
     depends_on:
       - db
